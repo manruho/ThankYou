@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ふじむらくるみ先生へ</title>
+  <style>
+    :root {
+      --bg1: #fff8fb;
+      --bg2: #f7fbff;
+      --card: rgba(255, 255, 255, 0.88);
+      --text: #333;
+      --accent-soft: #ffd6e5;
+      --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Hiragino Sans",
+        "Yu Gothic",
+        "Noto Sans JP",
+        sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, #ffe7f0 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #e8f4ff 0%, transparent 35%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 14px 28px;
+    }
+
+    .wrap {
+      width: min(760px, 100%);
+    }
+
+    .card {
+      background: var(--card);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 24px 18px 28px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card::before,
+    .card::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+
+    .card::before {
+      width: 160px;
+      height: 160px;
+      background: var(--accent-soft);
+      top: -55px;
+      right: -40px;
+    }
+
+    .card::after {
+      width: 120px;
+      height: 120px;
+      background: #dff1ff;
+      bottom: -45px;
+      left: -35px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      text-align: center;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      letter-spacing: 0.06em;
+      position: relative;
+      z-index: 1;
+    }
+
+    .subtitle {
+      margin: 0 0 22px;
+      text-align: center;
+      color: #666;
+      font-size: 0.96rem;
+      line-height: 1.7;
+      position: relative;
+      z-index: 1;
+    }
+
+    .poem {
+      display: grid;
+      gap: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .line {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+    }
+
+    .initial {
+      flex: 0 0 auto;
+      width: 2.4em;
+      height: 2.4em;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #ff7faa, #ffb3ca);
+      color: white;
+      font-weight: 800;
+      font-size: 1.25rem;
+      box-shadow: 0 8px 18px rgba(255, 107, 154, 0.28);
+      letter-spacing: 0.02em;
+    }
+
+    .text {
+      flex: 1;
+      padding-top: 0.15em;
+      font-size: 1.03rem;
+      line-height: 1.9;
+      word-break: keep-all;
+    }
+
+    .closing {
+      margin-top: 22px;
+      padding: 18px 14px;
+      text-align: center;
+      border-radius: 18px;
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.88),
+        rgba(255, 244, 248, 0.88)
+      );
+      font-weight: 700;
+      line-height: 1.9;
+      font-size: 1.04rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer {
+      margin-top: 14px;
+      text-align: center;
+      color: #777;
+      font-size: 0.85rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 20px 14px 24px;
+        border-radius: 20px;
+      }
+
+      .line {
+        gap: 10px;
+        padding: 10px;
+      }
+
+      .initial {
+        width: 2.2em;
+        height: 2.2em;
+        font-size: 1.1rem;
+      }
+
+      .text {
+        font-size: 0.98rem;
+        line-height: 1.8;
+      }
+
+      .closing {
+        font-size: 0.98rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <h1>ふじむら先生へ</h1>
+      
+
+      <div class="poem" aria-label="あいうえお作文">
+        <div class="line">
+          <div class="initial">ふ</div>
+          <div class="text">だんから、優しく見守ってくれて</div>
+        </div>
+        <div class="line">
+          <div class="initial">じ</div>
+          <div class="text">ゅぎょう以外でも支えてくれて、</div>
+        </div>
+        <div class="line">
+          <div class="initial">む</div>
+          <div class="text">りなく、前に進める励ましをもらい</div>
+        </div>
+        <div class="line">
+          <div class="initial">ら</div>
+          <div class="text">いねんも、担任でいてほしい先生です！</div>
+        </div>
+        <div class="line">
+          <div class="initial">く</div>
+          <div class="text">るしいことも、大変な時も</div>
+        </div>
+        <div class="line">
+          <div class="initial">る</div>
+          <div class="text">んるんで、楽しい！</div>
+        </div>
+        <div class="line">
+          <div class="initial">み</div>
+          <div class="text">んなが笑顔になれた！！！</div>
+        </div>
+      </div>
+
+      <div class="closing">
+        そんなクラスでした。
+      </div>
+
+      <div class="footer">
+        Thank you, Fujimura Kurumi Sensei.
+      </div>
+    </section>
+  </main>
+</body>
+</html>
